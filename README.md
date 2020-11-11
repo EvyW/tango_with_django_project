@@ -1,4 +1,4 @@
-# tango_with_django_project
+# Tango with django project
 
 This is a website called Rango that lets users browse through user categories to access various web pages.
 Users are able to see: 
