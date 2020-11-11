@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+
+{% load static %}
+
+<html>
+
+    <head>
+        <title>Rango</title>
+    </head>
+
+    <body>
+        <h1>Rango says...</h1>
+
+        <div>
+            hey there partner! <br />
+
+            <!--  boldmessage is a Django template variable. We can set values to these variables so they are replaced with whatever we want -->
+            <!-- To use this template, we need to reconfigure the index() view that we created earlier. Instead of dispatching a simple response (osea la funcion q retorna el string "Rango says hey there partner!", we will change the view to dispatch our template. -->
+            <strong>{{ boldmessage }}</strong><br />
+        </div>
+
+        <div>
+            <a href="/rango/about/">About</a><br />
+            <img src="{% static 'images/rango.jpg' %}"
+                alt="Picture of Rango" /> <!-- calling static will combine the URL specified in STATIC_URL (q es creado automaticamente cuando se crea un proyecto django) with images/rango.jpg to yield /static/images/rango.jpg. -->
+        </div>
+    </body>
+
+</html>
